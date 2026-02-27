@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Othello</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">모던 · 경쾌</p>
+          <h1>Othello</h1>
+          <p class="subtitle">가볍게 두고, 깊게 뒤집는 8x8 전략 보드 게임</p>
+        </div>
+        <div class="stats" id="stats">
+          <div class="stat">
+            <span class="label">흑</span>
+            <span class="value" id="black-count">2</span>
+          </div>
+          <div class="stat">
+            <span class="label">백</span>
+            <span class="value" id="white-count">2</span>
+          </div>
+          <div class="stat">
+            <span class="label">턴</span>
+            <span class="value" id="turn-indicator">흑</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="game">
+        <section class="board-wrap">
+          <div class="board" id="board" aria-label="Othello board" role="grid"></div>
+          <div class="thinking" aria-hidden="true">
+            <div class="bubble">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+          </div>
+          <div class="legend">
+            <span class="dot black"></span> 흑
+            <span class="dot white"></span> 백
+            <span class="dot hint"></span> 놓을 수 있는 칸
+          </div>
+        </section>
+
+        <aside class="panel">
+          <div class="panel-card">
+            <h2>플레이 안내</h2>
+            <ul class="help">
+              <li>상대 돌을 직선으로 감싸면 모두 뒤집어집니다.</li>
+              <li>놓을 수 있는 칸이 없으면 턴이 넘어갑니다.</li>
+              <li>더 많은 돌을 가진 쪽이 승리합니다.</li>
+            </ul>
+          </div>
+
+          <div class="panel-card">
+            <h2>컨트롤</h2>
+            <div class="controls">
+              <button id="restart">새 게임</button>
+              <button id="toggle-hints" class="ghost">힌트 끄기</button>
+            </div>
+            <div class="selector">
+              <label for="difficulty">AI 난이도</label>
+              <select id="difficulty">
+                <option value="easy">쉬움</option>
+                <option value="medium" selected>보통</option>
+                <option value="hard">어려움</option>
+              </select>
+            </div>
+            <div class="selector">
+              <label for="depth">어려움 깊이</label>
+              <select id="depth">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+              </select>
+            </div>
+            <div class="selector">
+              <label for="tempo">액션 템포</label>
+              <input id="tempo" type="range" min="0.6" max="1.4" step="0.05" value="1" />
+              <div class="range-meta">
+                <span>차분</span>
+                <span>강렬</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel-card status">
+            <div class="match" id="match">당신: 흑 · AI: 백</div>
+            <div id="status">흑의 차례입니다.</div>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
