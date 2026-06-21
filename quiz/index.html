@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요양보호사 교육 퀴즈</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+            background: #eef2f7;
+            color: #243043;
+        }
+        a { text-decoration: none; }
+        .hidden { display: none !important; }
+        .header {
+            background: linear-gradient(135deg, #24438a 0%, #2f7a6b 100%);
+            color: white;
+            padding: 30px 20px 22px;
+            text-align: center;
+        }
+        .header h1 { margin-bottom: 10px; font-size: 2rem; }
+        .header p { opacity: 0.95; }
+        .header .notice {
+            max-width: 900px;
+            margin: 14px auto 0;
+            padding: 12px 14px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            font-size: 0.92rem;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 24px 20px 40px;
+        }
+        .page.hidden { display: none; }
+        .category {
+            background: white;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            box-shadow: 0 8px 24px rgba(22, 34, 66, 0.08);
+            overflow: hidden;
+        }
+        .category-header {
+            background: #24438a;
+            color: white;
+            padding: 18px 22px;
+            cursor: pointer;
+            font-size: 1.05rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            align-items: center;
+        }
+        .category-header:hover { background: #1f3a75; }
+        .category-header .count {
+            background: rgba(255,255,255,0.15);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.84rem;
+            white-space: nowrap;
+        }
+        .category-content { display: none; padding: 20px; }
+        .category-content.active { display: block; }
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .quiz-btn {
+            display: block;
+            padding: 16px 15px;
+            background: linear-gradient(135deg, #f7f9fc 0%, #e8edf5 100%);
+            border: 2px solid #dbe4f1;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.96rem;
+            transition: all 0.18s ease;
+            text-align: center;
+            color: #243043;
+        }
+        .quiz-btn:hover {
+            border-color: #24438a;
+            background: linear-gradient(135deg, #24438a 0%, #2f7a6b 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(36, 67, 138, 0.22);
+        }
+        .quiz-btn .q-count {
+            display: block;
+            font-size: 0.82rem;
+            opacity: 0.78;
+            margin-top: 6px;
+        }
+        .quiz-page {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+        }
+        .thin-title-bar {
+            background: linear-gradient(135deg, #24438a 0%, #2f7a6b 100%);
+            color: white;
+            padding: 9px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0 4px 12px rgba(25, 42, 78, 0.18);
+            margin: 0 -20px;
+        }
+        .thin-title-bar h2 {
+            font-size: 1rem;
+            margin: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: 600;
+        }
+        .quiz-body {
+            padding-top: 16px;
+        }
+        .floating-toggle {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #24438a 0%, #2f7a6b 100%);
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(25, 42, 78, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+        }
+        .floating-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(25, 42, 78, 0.48);
+        }
+        .floating-toggle svg { width: 26px; height: 26px; }
+        .floating-toggle.hidden-toggle {
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(0.6);
+        }
+        .action-panel-backdrop {
+            position: fixed;
+            inset: 0;
+            background: transparent;
+            z-index: 52;
+            pointer-events: none;
+            display: none;
+        }
+        .action-panel {
+            position: fixed;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 320px;
+            background: white;
+            border-left: 1px solid #c8d2e2;
+            box-shadow: -14px 0 32px rgba(25, 42, 78, 0.28);
+            transform: translateX(105%);
+            transition: transform 0.28s ease;
+            z-index: 55;
+            display: flex;
+            flex-direction: column;
+        }
+        .action-panel.open { transform: translateX(0); }
+        .action-panel-header {
+            background: linear-gradient(135deg, #24438a 0%, #2f7a6b 100%);
+            color: white;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .action-panel-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            min-width: 0;
+            flex: 1;
+        }
+        .action-panel-close {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.28);
+            color: white;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+        .action-panel-close:hover { background: rgba(255,255,255,0.28); }
+        .action-panel-body {
+            padding: 16px 16px 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        .action-panel-meta {
+            font-size: 0.86rem;
+            color: #546173;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .action-panel-score {
+            background: #eef3fb;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-weight: 600;
+            line-height: 1.5;
+            margin-bottom: 16px;
+            font-size: 0.93rem;
+            color: #243043;
+        }
+        .action-panel .btn-group {
+            flex-direction: column;
+            gap: 8px;
+        }
+        .action-panel .btn {
+            width: 100%;
+            padding: 12px 14px;
+            font-size: 0.95rem;
+        }
+        .action-panel .btn-light {
+            background: white;
+            color: #24438a;
+            border: 1px solid #c4cfdd;
+        }
+        .action-panel .btn-light:hover { background: #eef3fb; }
+        .question {
+            background: #f8fafc;
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-left: 4px solid #24438a;
+        }
+        .question.disabled {
+            border-left-color: #8d98aa;
+            background: #f2f4f8;
+        }
+        .question.unanswered {
+            border: 2px solid #c93d3d;
+            border-left: 4px solid #c93d3d;
+            background: #fdf3f3;
+        }
+        .question-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+        .question-num {
+            background: #24438a;
+            color: white;
+            min-width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .question-text {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+        .question-status-badge {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 8px;
+            padding: 5px 10px;
+            border-radius: 999px;
+            background: #e7ecf3;
+            color: #546173;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+        .question-image {
+            max-width: 100%;
+            max-height: 360px;
+            margin: 14px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+        }
+        .question-image-text {
+            margin: 14px 0;
+            padding: 14px 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(36, 67, 138, 0.14);
+            background: #f4f8ff;
+            color: #1b2b52;
+            white-space: pre-line;
+            line-height: 1.65;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            margin: 10px 0;
+            background: white;
+            border: 2px solid #dde5f0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.18s ease;
+        }
+        .option:hover {
+            border-color: #24438a;
+            background: #f1f6ff;
+        }
+        .option.disabled {
+            cursor: not-allowed;
+            opacity: 0.62;
+            background: #f3f5f8;
+            border-color: #d6dde8;
+        }
+        .option.disabled:hover {
+            border-color: #d6dde8;
+            background: #f3f5f8;
+        }
+        .option.selected {
+            border-color: #24438a;
+            background: #eaf1ff;
+        }
+        .option.correct {
+            border-color: #1f8a4d !important;
+            background: #dff4e7 !important;
+        }
+        .option.estimated {
+            border-color: #c79022 !important;
+            background: #fff1cf !important;
+        }
+        .option.incorrect {
+            border-color: #c93d3d !important;
+            background: #f9dddd !important;
+        }
+        .option-marker {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #c4cfdd;
+            border-radius: 50%;
+            margin-right: 12px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .option.selected .option-marker {
+            border-color: #24438a;
+            background: #24438a;
+        }
+        .option.selected .option-marker::after {
+            content: "✓";
+            color: white;
+            font-size: 13px;
+        }
+        .option.correct .option-marker {
+            border-color: #1f8a4d;
+            background: #1f8a4d;
+        }
+        .option.correct .option-marker::after {
+            content: "✓";
+            color: white;
+            font-size: 13px;
+        }
+        .option.incorrect .option-marker {
+            border-color: #c93d3d;
+            background: #c93d3d;
+        }
+        .option.incorrect .option-marker::after {
+            content: "✕";
+            color: white;
+            font-size: 12px;
+        }
+        .option-text {
+            flex: 1;
+            line-height: 1.55;
+            white-space: pre-wrap;
+        }
+        .option-image {
+            max-width: 200px;
+            max-height: 120px;
+            margin-left: 10px;
+            border-radius: 8px;
+        }
+        .question-feedback {
+            margin-top: 12px;
+            padding: 12px 14px;
+            border-radius: 10px;
+            display: none;
+            font-size: 0.93rem;
+            line-height: 1.55;
+            white-space: pre-wrap;
+        }
+        .question-feedback.active { display: block; }
+        .question-feedback.verified {
+            background: #eef7ef;
+            color: #214d2d;
+            border: 1px solid #cce6d1;
+        }
+        .question-feedback.estimated {
+            background: #fff5dd;
+            color: #6d540e;
+            border: 1px solid #f0db97;
+        }
+        .question-feedback.unknown {
+            background: #f6f3e8;
+            color: #66531a;
+            border: 1px solid #eadfb4;
+        }
+        .question-feedback.disabled {
+            background: #eef1f5;
+            color: #516071;
+            border: 1px solid #d8dee7;
+        }
+        .question-feedback .meta {
+            display: block;
+            margin-top: 6px;
+            opacity: 0.8;
+            font-size: 0.84rem;
+        }
+        .question-feedback .explanation {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+        .question-feedback .source-link {
+            display: inline-block;
+            margin-top: 8px;
+            margin-right: 10px;
+            color: inherit;
+            text-decoration: underline;
+            font-size: 0.86rem;
+        }
+        .question-feedback .unanswered-badge {
+            display: inline-block;
+            background: #c93d3d;
+            color: #fff;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            margin-left: 4px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 11px 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+        .btn-primary { background: #24438a; color: white; }
+        .btn-secondary { background: #5c6978; color: white; }
+        .btn-success { background: #238251; color: white; }
+        .btn-warning { background: #bd7b1f; color: white; }
+        .btn-light { background: rgba(255,255,255,0.16); color: white; border: 1px solid rgba(255,255,255,0.24); }
+        .completion-panel {
+            margin-bottom: 18px;
+            background: white;
+            border: 1px solid #d8e2ef;
+            border-radius: 14px;
+            padding: 18px 18px 16px;
+            box-shadow: 0 8px 24px rgba(22, 34, 66, 0.08);
+        }
+        .completion-panel h3 {
+            margin-bottom: 8px;
+            color: #24438a;
+        }
+        .completion-panel p {
+            line-height: 1.65;
+            margin-bottom: 12px;
+        }
+        @media (max-width: 760px) {
+            .quiz-page { padding: 0 12px 28px; }
+            .container { padding: 18px 12px 28px; }
+            .thin-title-bar { margin: 0 -12px; padding: 8px 14px; }
+            .thin-title-bar h2 { font-size: 0.95rem; }
+            .category-header { flex-direction: column; align-items: flex-start; }
+            .floating-toggle { right: 16px; bottom: 16px; width: 52px; height: 52px; }
+            .action-panel {
+                right: 0;
+                left: 0;
+                top: auto;
+                bottom: 0;
+                width: 100%;
+                max-height: 78vh;
+                transform: translateY(105%);
+                border-radius: 16px 16px 0 0;
+                border-left: none;
+                border-top: 1px solid #c8d2e2;
+                box-shadow: 0 -14px 32px rgba(25, 42, 78, 0.28);
+            }
+            .action-panel.open { transform: translateY(0); }
+            .action-panel-header { border-radius: 16px 16px 0 0; }
+            .action-panel-backdrop { display: block; }
+            .action-panel-backdrop.open { pointer-events: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>교육 퀴즈</h1>
+        <p>정답 · 해설 · 교재 근거 포함 학습용</p>
+        <div class="notice">
+            수동 검증답안 1226문항이 반영되어 있습니다.
+            나머지 0문항은 기존 수집값 또는 추정값으로 구분 표시되며, 0문항은 아직 미확정입니다.
+            원문 결손 등으로 검토 중인 9문항은 비활성화되어 채점에서 제외됩니다.
+        </div>
+    </div>
+
+    <main>
+        <section id="homePage" class="page">
+            <div class="container">
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>그림문제</span>
+                <span class="count">5개 퀴즈 / 50문제 / 검증 50 / 추정 0</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EA%B7%B8%EB%A6%BC%EB%AC%B8%EC%A0%9C_01%ED%9A%8C" data-quiz-id="그림문제_01회">
+                        그림문제 01회
+                        <span class="q-count">10문제 / 검증 10 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EA%B7%B8%EB%A6%BC%EB%AC%B8%EC%A0%9C_02%ED%9A%8C" data-quiz-id="그림문제_02회">
+                        그림문제 02회
+                        <span class="q-count">10문제 / 검증 10 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EA%B7%B8%EB%A6%BC%EB%AC%B8%EC%A0%9C_03%ED%9A%8C" data-quiz-id="그림문제_03회">
+                        그림문제 03회
+                        <span class="q-count">10문제 / 검증 10 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EA%B7%B8%EB%A6%BC%EB%AC%B8%EC%A0%9C_04%ED%9A%8C" data-quiz-id="그림문제_04회">
+                        그림문제 04회
+                        <span class="q-count">10문제 / 검증 10 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EA%B7%B8%EB%A6%BC%EB%AC%B8%EC%A0%9C_05%ED%9A%8C" data-quiz-id="그림문제_05회">
+                        그림문제 05회
+                        <span class="q-count">10문제 / 검증 10 / 추정 0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>이론문제</span>
+                <span class="count">10개 퀴즈 / 349문제 / 검증 349 / 추정 0 / 비활성 1</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_01%ED%9A%8C" data-quiz-id="이론_01회">
+                        이론 01회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_02%ED%9A%8C" data-quiz-id="이론_02회">
+                        이론 02회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_03%ED%9A%8C" data-quiz-id="이론_03회">
+                        이론 03회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_04%ED%9A%8C" data-quiz-id="이론_04회">
+                        이론 04회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_05%ED%9A%8C" data-quiz-id="이론_05회">
+                        이론 05회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_06%ED%9A%8C" data-quiz-id="이론_06회">
+                        이론 06회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_07%ED%9A%8C" data-quiz-id="이론_07회">
+                        이론 07회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_08%ED%9A%8C" data-quiz-id="이론_08회">
+                        이론 08회
+                        <span class="q-count">34문제 / 검증 34 / 추정 0 / 비활성 1</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_09%ED%9A%8C" data-quiz-id="이론_09회">
+                        이론 09회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9D%B4%EB%A1%A0_10%ED%9A%8C" data-quiz-id="이론_10회">
+                        이론 10회
+                        <span class="q-count">35문제 / 검증 35 / 추정 0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>실기문제</span>
+                <span class="count">10개 퀴즈 / 450문제 / 검증 450 / 추정 0</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_01%ED%9A%8C" data-quiz-id="실기_01회">
+                        실기 01회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_02%ED%9A%8C" data-quiz-id="실기_02회">
+                        실기 02회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_03%ED%9A%8C" data-quiz-id="실기_03회">
+                        실기 03회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_04%ED%9A%8C" data-quiz-id="실기_04회">
+                        실기 04회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_05%ED%9A%8C" data-quiz-id="실기_05회">
+                        실기 05회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_06%ED%9A%8C" data-quiz-id="실기_06회">
+                        실기 06회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_07%ED%9A%8C" data-quiz-id="실기_07회">
+                        실기 07회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_08%ED%9A%8C" data-quiz-id="실기_08회">
+                        실기 08회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_09%ED%9A%8C" data-quiz-id="실기_09회">
+                        실기 09회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%8B%A4%EA%B8%B0_10%ED%9A%8C" data-quiz-id="실기_10회">
+                        실기 10회
+                        <span class="q-count">45문제 / 검증 45 / 추정 0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>요양보호사 문제</span>
+                <span class="count">3개 퀴즈 / 232문제 / 검증 232 / 추정 0 / 비활성 8</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EC%9A%94%EC%96%91%EB%B3%B4%ED%98%B8%EC%82%AC_%EB%AC%B8%EC%A0%9C_1" data-quiz-id="요양보호사_문제_1">
+                        요양보호사 문제 1
+                        <span class="q-count">78문제 / 검증 78 / 추정 0 / 비활성 2</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9A%94%EC%96%91%EB%B3%B4%ED%98%B8%EC%82%AC_%EB%AC%B8%EC%A0%9C_2" data-quiz-id="요양보호사_문제_2">
+                        요양보호사 문제 2
+                        <span class="q-count">78문제 / 검증 78 / 추정 0 / 비활성 2</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%9A%94%EC%96%91%EB%B3%B4%ED%98%B8%EC%82%AC_%EB%AC%B8%EC%A0%9C_3" data-quiz-id="요양보호사_문제_3">
+                        요양보호사 문제 3
+                        <span class="q-count">76문제 / 검증 76 / 추정 0 / 비활성 4</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>질환문제</span>
+                <span class="count">3개 퀴즈 / 43문제 / 검증 43 / 추정 0</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EC%A7%88%ED%99%98%EB%AC%B8%EC%A0%9C_1" data-quiz-id="질환문제_1">
+                        질환문제 1
+                        <span class="q-count">25문제 / 검증 25 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%A7%88%ED%99%98%EB%AC%B8%EC%A0%9C_2" data-quiz-id="질환문제_2">
+                        질환문제 2
+                        <span class="q-count">13문제 / 검증 13 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%A7%88%ED%99%98%EB%AC%B8%EC%A0%9C_3" data-quiz-id="질환문제_3">
+                        질환문제 3
+                        <span class="q-count">5문제 / 검증 5 / 추정 0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>체위변경과 이동</span>
+                <span class="count">3개 퀴즈 / 74문제 / 검증 74 / 추정 0</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EC%B2%B4%EC%9C%84%EB%B3%80%EA%B2%BD%EA%B3%BC_%EC%9D%B4%EB%8F%99_1" data-quiz-id="체위변경과_이동_1">
+                        체위변경과 이동 1
+                        <span class="q-count">26문제 / 검증 26 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%B2%B4%EC%9C%84%EB%B3%80%EA%B2%BD%EA%B3%BC_%EC%9D%B4%EB%8F%99_2" data-quiz-id="체위변경과_이동_2">
+                        체위변경과 이동 2
+                        <span class="q-count">21문제 / 검증 21 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EC%B2%B4%EC%9C%84%EB%B3%80%EA%B2%BD%EA%B3%BC_%EC%9D%B4%EB%8F%99_3" data-quiz-id="체위변경과_이동_3">
+                        체위변경과 이동 3
+                        <span class="q-count">27문제 / 검증 27 / 추정 0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" onclick="toggleCategory(this)">
+                <span>기타</span>
+                <span class="count">2개 퀴즈 / 28문제 / 검증 28 / 추정 0</span>
+            </div>
+            <div class="category-content">
+                <div class="quiz-grid">
+                    <a class="quiz-btn" href="?quiz=%EB%85%B8%EC%9D%B8%EC%84%B1_%EC%A7%88%ED%99%98%EC%9D%98_%ED%8A%B9%EC%84%B1" data-quiz-id="노인성_질환의_특성">
+                        노인성 질환의 특성
+                        <span class="q-count">6문제 / 검증 6 / 추정 0</span>
+                    </a>
+                    <a class="quiz-btn" href="?quiz=%EB%85%B8%ED%99%94%EC%97%90_%EB%94%B0%EB%A5%B8_%EB%B3%80%ED%99%94" data-quiz-id="노화에_따른_변화">
+                        노화에 따른 변화
+                        <span class="q-count">22문제 / 검증 22 / 추정 0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+            </div>
+        </section>
+
+        <section id="quizPage" class="page hidden">
+            <div class="quiz-page">
+                <div class="thin-title-bar">
+                    <h2 id="quizTitle">퀴즈</h2>
+                </div>
+                <div class="quiz-body">
+                    <div id="completionPanel" class="completion-panel hidden"></div>
+                    <div id="quizBody"></div>
+                </div>
+            </div>
+
+            <button class="floating-toggle" id="floatingToggle" type="button" onclick="togglePanel()" aria-label="퀴즈 도구 열기">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+            </button>
+
+            <div class="action-panel-backdrop" id="actionBackdrop" onclick="closePanel()"></div>
+
+            <aside class="action-panel" id="actionPanel" aria-hidden="true">
+                <div class="action-panel-header">
+                    <h3 id="panelTitle">퀴즈</h3>
+                    <button class="action-panel-close" type="button" onclick="closePanel()" aria-label="패널 닫기">✕</button>
+                </div>
+                <div class="action-panel-body">
+                    <div class="action-panel-meta" id="quizMeta"></div>
+                    <div class="action-panel-score" id="scoreDisplay">응답: 0 / 0</div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" id="gradeButton" onclick="checkAnswers()">채점하기</button>
+                        <button class="btn btn-warning" onclick="showAnswersOnly()">정답 보기</button>
+                        <button class="btn btn-secondary" onclick="resetQuiz()">초기화</button>
+                        <button class="btn btn-success" onclick="scrollToTop()">맨 위로</button>
+                        <button class="btn btn-light" onclick="returnHome()">초기 화면</button>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <!-- QUIZ_SCRIPTS_START -->
+    <script src="data/quizzes/그림문제_01회.js"></script>
+    <script src="data/quizzes/그림문제_02회.js"></script>
+    <script src="data/quizzes/그림문제_03회.js"></script>
+    <script src="data/quizzes/그림문제_04회.js"></script>
+    <script src="data/quizzes/그림문제_05회.js"></script>
+    <script src="data/quizzes/이론_01회.js"></script>
+    <script src="data/quizzes/이론_02회.js"></script>
+    <script src="data/quizzes/이론_03회.js"></script>
+    <script src="data/quizzes/이론_04회.js"></script>
+    <script src="data/quizzes/이론_05회.js"></script>
+    <script src="data/quizzes/이론_06회.js"></script>
+    <script src="data/quizzes/이론_07회.js"></script>
+    <script src="data/quizzes/이론_08회.js"></script>
+    <script src="data/quizzes/이론_09회.js"></script>
+    <script src="data/quizzes/이론_10회.js"></script>
+    <script src="data/quizzes/실기_01회.js"></script>
+    <script src="data/quizzes/실기_02회.js"></script>
+    <script src="data/quizzes/실기_03회.js"></script>
+    <script src="data/quizzes/실기_04회.js"></script>
+    <script src="data/quizzes/실기_05회.js"></script>
+    <script src="data/quizzes/실기_06회.js"></script>
+    <script src="data/quizzes/실기_07회.js"></script>
+    <script src="data/quizzes/실기_08회.js"></script>
+    <script src="data/quizzes/실기_09회.js"></script>
+    <script src="data/quizzes/실기_10회.js"></script>
+    <script src="data/quizzes/노인성_질환의_특성.js"></script>
+    <script src="data/quizzes/노화에_따른_변화.js"></script>
+    <script src="data/quizzes/요양보호사_문제_1.js"></script>
+    <script src="data/quizzes/요양보호사_문제_2.js"></script>
+    <script src="data/quizzes/요양보호사_문제_3.js"></script>
+    <script src="data/quizzes/질환문제_1.js"></script>
+    <script src="data/quizzes/질환문제_2.js"></script>
+    <script src="data/quizzes/질환문제_3.js"></script>
+    <script src="data/quizzes/체위변경과_이동_1.js"></script>
+    <script src="data/quizzes/체위변경과_이동_2.js"></script>
+    <script src="data/quizzes/체위변경과_이동_3.js"></script>
+    <!-- QUIZ_SCRIPTS_END -->
+    <script>
+    const quizData = window.quizData;
+    let currentQuiz = null;
+    let currentQuizId = null;
+    let userAnswers = {};
+    let lastCheckSummary = null;
+    const homePage = document.getElementById('homePage');
+    const quizPage = document.getElementById('quizPage');
+
+    function toggleCategory(el) {
+        const content = el.nextElementSibling;
+        content.classList.toggle('active');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const first = document.querySelector('.category-content');
+        if (first) first.classList.add('active');
+        document.querySelectorAll('[data-quiz-id]').forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                openQuiz(link.dataset.quizId);
+            });
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const quizId = params.get('quiz');
+        if (quizId && quizData[quizId]) {
+            openQuiz(quizId);
+        } else {
+            showHomePage();
+        }
+    });
+
+    function quizStatusCounts(quiz) {
+        const counts = { verified: 0, estimated: 0, unknown: 0, disabled: 0, active: 0 };
+        quiz.questions.forEach((q) => {
+            if (q.isDisabled) {
+                counts.disabled += 1;
+                return;
+            }
+            counts.active += 1;
+            if (q.answer === null || q.answer === undefined) {
+                counts.unknown += 1;
+            } else if (q.answerStatus === 'verified') {
+                counts.verified += 1;
+            } else {
+                counts.estimated += 1;
+            }
+        });
+        return counts;
+    }
+
+    function showHomePage() {
+        homePage.classList.remove('hidden');
+        quizPage.classList.add('hidden');
+    }
+
+    function showQuizPage() {
+        homePage.classList.add('hidden');
+        quizPage.classList.remove('hidden');
+    }
+
+    function getQuestionDisplayNumber(question) {
+        const match = (question.text || '').match(/^\s*(\d+)\.\s*/);
+        if (match) return match[1];
+        return String(question.number ?? '');
+    }
+
+    function getQuestionBodyText(question) {
+        return (question.text || '').replace(/^\s*\d+\.\s*/, '').trim();
+    }
+
+    function openQuiz(quizId) {
+        currentQuizId = quizId;
+        currentQuiz = quizData[quizId];
+        userAnswers = {};
+        lastCheckSummary = null;
+        hideCompletionPanel();
+        showQuizPage();
+
+        const counts = quizStatusCounts(currentQuiz);
+        document.getElementById('quizTitle').textContent = currentQuiz.title;
+        document.getElementById('panelTitle').textContent = currentQuiz.title;
+        document.getElementById('quizMeta').textContent =
+            `활성 ${counts.active}문제 / 검증답안 ${counts.verified} / 추정답안 ${counts.estimated} / 미확정 ${counts.unknown} / 비활성 ${counts.disabled}`;
+        closePanel();
+
+        let html = '';
+
+        currentQuiz.questions.forEach((q, idx) => {
+            const displayNumber = getQuestionDisplayNumber(q);
+            const bodyText = getQuestionBodyText(q) || '(문제)';
+            const disabledClass = q.isDisabled ? ' disabled' : '';
+            const disabledBadge = q.isDisabled ? '<div class="question-status-badge">검토 중 문항 · 응답 및 채점 제외</div>' : '';
+            html += `
+                <div class="question${disabledClass}" id="q${idx}">
+                    <div class="question-header">
+                        <div class="question-num">${escapeHtml(displayNumber)}</div>
+                        <div class="question-text">${escapeHtml(bodyText)}
+                            ${disabledBadge}
+                        </div>
+                    </div>
+                    ${q.imageText ? `<div class="question-image-text">${escapeHtml(q.imageText)}</div>` : ''}
+                    ${q.image && !q.imageTextOnly ? `<img src="${q.image}" class="question-image" alt="문제 이미지" onerror="this.style.display='none'">` : ''}
+                    <div class="options">
+            `;
+
+            q.options.forEach((opt, optIdx) => {
+                const displayText = formatOptionLabel(opt.text || '', optIdx);
+                const optionClass = q.isDisabled ? ' disabled' : '';
+                const clickHandler = q.isDisabled ? '' : ` onclick="selectOption(${idx}, ${optIdx})"`;
+                html += `
+                    <div class="option${optionClass}" data-q="${idx}" data-opt="${optIdx}"${clickHandler}>
+                        <div class="option-marker"></div>
+                        <span class="option-text">${escapeHtml(displayText)}</span>
+                        ${opt.image ? `<img src="${opt.image}" class="option-image" alt="보기 이미지" onerror="this.style.display='none'">` : ''}
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                    <div class="question-feedback" id="feedback-${idx}"></div>
+                </div>
+            `;
+        });
+
+        document.getElementById('quizBody').innerHTML = html;
+        updateScore();
+        setQuizParam(quizId);
+        scrollToTop();
+    }
+
+    function formatOptionLabel(text, optIdx) {
+        const circleNums = ['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩'];
+        const cleaned = text || '';
+        const hasNum = circleNums.some((label) => cleaned.startsWith(label));
+        return hasNum ? cleaned : `${circleNums[optIdx] || (optIdx + 1)} ${cleaned}`;
+    }
+
+    function escapeHtml(text) {
+        if (!text) return '';
+        const div = document.createElement('div');
+        div.textContent = text;
+        return div.innerHTML;
+    }
+
+    function setQuizParam(quizId) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('quiz', quizId);
+        history.replaceState(null, '', url.toString());
+    }
+
+    function clearQuizParam() {
+        const url = new URL(window.location.href);
+        url.searchParams.delete('quiz');
+        history.replaceState(null, '', url.toString());
+    }
+
+    function returnHome() {
+        currentQuiz = null;
+        currentQuizId = null;
+        userAnswers = {};
+        lastCheckSummary = null;
+        clearQuizParam();
+        closePanel();
+        showHomePage();
+        hideCompletionPanel();
+        scrollToTop();
+    }
+
+    function togglePanel() {
+        const panel = document.getElementById('actionPanel');
+        if (panel.classList.contains('open')) {
+            closePanel();
+        } else {
+            openPanel();
+        }
+    }
+
+    function openPanel() {
+        const panel = document.getElementById('actionPanel');
+        const backdrop = document.getElementById('actionBackdrop');
+        const toggle = document.getElementById('floatingToggle');
+        if (panel) {
+            panel.classList.add('open');
+            panel.setAttribute('aria-hidden', 'false');
+        }
+        if (backdrop) backdrop.classList.add('open');
+        if (toggle) toggle.classList.add('hidden-toggle');
+    }
+
+    function closePanel() {
+        const panel = document.getElementById('actionPanel');
+        const backdrop = document.getElementById('actionBackdrop');
+        const toggle = document.getElementById('floatingToggle');
+        if (panel) {
+            panel.classList.remove('open');
+            panel.setAttribute('aria-hidden', 'true');
+        }
+        if (backdrop) backdrop.classList.remove('open');
+        if (toggle) toggle.classList.remove('hidden-toggle');
+    }
+
+    function selectOption(qIdx, optIdx) {
+        if (!currentQuiz || !currentQuiz.questions[qIdx] || currentQuiz.questions[qIdx].isDisabled) {
+            return;
+        }
+        userAnswers[qIdx] = optIdx;
+        document.querySelectorAll(`[data-q="${qIdx}"]`).forEach((el) => {
+            el.classList.remove('selected');
+        });
+        const selected = document.querySelector(`[data-q="${qIdx}"][data-opt="${optIdx}"]`);
+        if (selected) selected.classList.add('selected');
+        updateScore();
+    }
+
+    function optionDisplayText(question, optIdx) {
+        const option = question.options[optIdx];
+        if (!option) return '';
+        return formatOptionLabel(option.text || '', optIdx);
+    }
+
+    function clearFeedback() {
+        document.querySelectorAll('.option').forEach((el) => {
+            el.classList.remove('correct', 'incorrect', 'estimated');
+        });
+        document.querySelectorAll('.question').forEach((el) => {
+            el.classList.remove('unanswered');
+        });
+        document.querySelectorAll('.question-feedback').forEach((el) => {
+            el.className = 'question-feedback';
+            el.innerHTML = '';
+        });
+    }
+
+    function applyFeedback(revealOnly) {
+        clearFeedback();
+
+        let gradedVerified = 0;
+        let correct = 0;
+        let estimated = 0;
+        let unresolved = 0;
+        let disabled = 0;
+        let unanswered = 0;
+
+        currentQuiz.questions.forEach((q, idx) => {
+            const feedback = document.getElementById(`feedback-${idx}`);
+            const card = document.getElementById(`q${idx}`);
+            if (q.isDisabled) {
+                disabled += 1;
+                feedback.className = 'question-feedback active disabled';
+                feedback.textContent = q.disabledReason || '원문 결손 또는 보기 훼손으로 비활성화된 문항입니다.';
+                return;
+            }
+            if (userAnswers[idx] === undefined) {
+                unanswered += 1;
+                if (card) card.classList.add('unanswered');
+            }
+            const answerIdx = q.answer;
+            if (answerIdx === null || answerIdx === undefined) {
+                unresolved += 1;
+                feedback.className = 'question-feedback active unknown';
+                feedback.textContent = '정답 데이터 미확정';
+                return;
+            }
+
+            const isVerified = q.answerStatus === 'verified';
+            if (isVerified) {
+                gradedVerified += 1;
+            } else {
+                estimated += 1;
+            }
+            const answerOption = document.querySelector(`[data-q="${idx}"][data-opt="${answerIdx}"]`);
+            if (answerOption) answerOption.classList.add(isVerified ? 'correct' : 'estimated');
+
+            const selected = userAnswers[idx];
+            if (isVerified && selected !== undefined && selected === answerIdx) {
+                correct += 1;
+            }
+            if (selected !== undefined && selected !== answerIdx) {
+                const wrong = document.querySelector(`[data-q="${idx}"][data-opt="${selected}"]`);
+                if (wrong) wrong.classList.add('incorrect');
+            }
+
+            const answerLabel = isVerified ? '검증답안' : '추정답안';
+            const parts = [`${answerLabel}: ${escapeHtml(optionDisplayText(q, answerIdx))}`];
+            if (selected !== undefined && !revealOnly) {
+                parts.push(`선택: ${escapeHtml(optionDisplayText(q, selected))}`);
+            } else if (selected === undefined) {
+                parts.push(`<span class="unanswered-badge">미응답</span>`);
+            }
+            const source = q.answerSource ? escapeHtml(q.answerSource) : '정답 데이터';
+            const note = q.answerNote ? ` · ${escapeHtml(q.answerNote)}` : '';
+            const confidence = q.answerConfidence ? `신뢰도 ${Math.round(q.answerConfidence * 100)}%` : '';
+            const explanation = q.answerExplanation
+                ? `<span class="explanation">해설: ${escapeHtml(q.answerExplanation)}</span>`
+                : '';
+            const referenceLink = q.answerReferenceUrl
+                ? `<a class="source-link" href="${escapeHtml(q.answerReferenceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(q.answerReferenceLabel || '공식 출처 보기')}</a>`
+                : '';
+            const supplementLink = q.answerSupplementReferenceUrl
+                ? `<a class="source-link" href="${escapeHtml(q.answerSupplementReferenceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(q.answerSupplementReferenceLabel || '보조 출처 보기')}</a>`
+                : '';
+            const meta = isVerified
+                ? `${source}${note}`
+                : `${source}${note}${confidence ? ' · ' + confidence : ''} · 채점 점수에는 포함되지 않음`;
+            feedback.className = `question-feedback active ${isVerified ? 'verified' : 'estimated'}`;
+            feedback.innerHTML = `${parts.join('<br>')}<span class="meta">${meta}</span>${explanation}${referenceLink}${supplementLink}`;
+        });
+
+        lastCheckSummary = { gradedVerified, correct, estimated, unresolved, disabled, unanswered, revealOnly };
+        updateScore();
+        renderCompletionPanel();
+    }
+
+    function checkAnswers() {
+        if (currentQuiz) {
+            const unansweredCount = currentQuiz.questions.reduce((acc, q, idx) => {
+                if (q.isDisabled) return acc;
+                return acc + (userAnswers[idx] === undefined ? 1 : 0);
+            }, 0);
+            if (unansweredCount > 0) {
+                const ok = confirm(`미응답 문항이 ${unansweredCount}개 있습니다.\n그래도 채점하시겠습니까?`);
+                if (!ok) return;
+            }
+        }
+        applyFeedback(false);
+        scrollToTop();
+    }
+
+    function showAnswersOnly() {
+        applyFeedback(true);
+        scrollToTop();
+    }
+
+    function updateScore() {
+        const counts = currentQuiz ? quizStatusCounts(currentQuiz) : { verified: 0, estimated: 0, unknown: 0, disabled: 0, active: 0 };
+        const answered = currentQuiz
+            ? Object.keys(userAnswers).filter((key) => !currentQuiz.questions[Number(key)]?.isDisabled).length
+            : 0;
+        const total = currentQuiz ? counts.active : 0;
+        const gradeButton = document.getElementById('gradeButton');
+        if (gradeButton && currentQuiz) {
+            gradeButton.textContent = answered === total ? '완료하고 채점' : '채점하기';
+        }
+
+        if (!lastCheckSummary) {
+            document.getElementById('scoreDisplay').textContent =
+                `응답: ${answered} / ${total} · 검증답안: ${counts.verified} · 추정답안: ${counts.estimated} · 비활성: ${counts.disabled}`;
+            return;
+        }
+
+        const pct = lastCheckSummary.gradedVerified > 0
+            ? Math.round((lastCheckSummary.correct / lastCheckSummary.gradedVerified) * 100)
+            : 0;
+        const unansweredText = lastCheckSummary.unanswered ? ` · 미응답: ${lastCheckSummary.unanswered}문제` : '';
+        document.getElementById('scoreDisplay').textContent =
+            `검증채점: ${lastCheckSummary.correct} / ${lastCheckSummary.gradedVerified} (${pct}%) · 추정답안: ${lastCheckSummary.estimated}문제 · 미확정: ${lastCheckSummary.unresolved}문제 · 비활성: ${lastCheckSummary.disabled}문제${unansweredText}`;
+    }
+
+    function hideCompletionPanel() {
+        const panel = document.getElementById('completionPanel');
+        panel.classList.add('hidden');
+        panel.innerHTML = '';
+    }
+
+    function renderCompletionPanel() {
+        const panel = document.getElementById('completionPanel');
+        if (!currentQuiz || !lastCheckSummary) {
+            hideCompletionPanel();
+            return;
+        }
+
+        const counts = quizStatusCounts(currentQuiz);
+        const answered = Object.keys(userAnswers).filter((key) => !currentQuiz.questions[Number(key)]?.isDisabled).length;
+        const total = counts.active;
+        const pct = lastCheckSummary.gradedVerified > 0
+            ? Math.round((lastCheckSummary.correct / lastCheckSummary.gradedVerified) * 100)
+            : 0;
+        const completionText = answered === total
+            ? '모든 문항 응답이 완료되었습니다.'
+            : `미응답 문항이 ${total - answered}개 남아 있습니다.`;
+        const unansweredLine = lastCheckSummary.unanswered
+            ? `<br><strong style="color:#c93d3d;">미응답 ${lastCheckSummary.unanswered}문항</strong>은 빨간색 테두리로 표시되어 있습니다.`
+            : '';
+
+        panel.innerHTML = `
+            <h3>채점 결과</h3>
+            <p>${completionText}<br>검증답안 기준 점수는 <strong>${lastCheckSummary.correct} / ${lastCheckSummary.gradedVerified}</strong> (${pct}%)입니다.<br>추정답안 ${lastCheckSummary.estimated}문항, 미확정 ${lastCheckSummary.unresolved}문항은 별도 표시되며, 비활성 ${lastCheckSummary.disabled}문항은 응답과 채점에서 제외됩니다.${unansweredLine}</p>
+            <div class="btn-group">
+                <button class="btn btn-secondary" onclick="resetQuiz()">다시 풀기</button>
+                <button class="btn btn-primary" onclick="returnHome()">초기 화면으로</button>
+            </div>
+        `;
+        panel.classList.remove('hidden');
+    }
+
+    function resetQuiz() {
+        userAnswers = {};
+        lastCheckSummary = null;
+        document.querySelectorAll('.option').forEach((el) => {
+            el.classList.remove('selected', 'correct', 'incorrect', 'estimated');
+        });
+        document.querySelectorAll('.question').forEach((el) => {
+            el.classList.remove('unanswered');
+        });
+        document.querySelectorAll('.question-feedback').forEach((el) => {
+            el.className = 'question-feedback';
+            el.innerHTML = '';
+        });
+        hideCompletionPanel();
+        updateScore();
+        scrollToTop();
+    }
+
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !quizPage.classList.contains('hidden')) returnHome();
+    });
+    </script>
+</body>
+</html>

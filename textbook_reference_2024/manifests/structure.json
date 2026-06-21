@@ -1,0 +1,1635 @@
+{
+  "parts": [
+    {
+      "index": 1,
+      "title": "Ⅰ부. 요양보호와 인권",
+      "start_page": 11
+    },
+    {
+      "index": 2,
+      "title": "Ⅱ부. 노화와 건강증진",
+      "start_page": 159
+    },
+    {
+      "index": 3,
+      "title": "Ⅲ부. 요양보호와 생활지원",
+      "start_page": 275
+    },
+    {
+      "index": 4,
+      "title": "Ⅳ부. 상황별 요양보호 기술",
+      "start_page": 569
+    }
+  ],
+  "chapters": [
+    {
+      "index": 1,
+      "title": "1장 요양보호 대상자 이해",
+      "start_page": 13,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권"
+    },
+    {
+      "index": 2,
+      "title": "2장 노인복지와 장기요양제도",
+      "start_page": 35,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권"
+    },
+    {
+      "index": 3,
+      "title": "3장. 노인의 인권과 보호",
+      "start_page": 85,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권"
+    },
+    {
+      "index": 4,
+      "title": "4장. 요양보호사의 인권보호와 자기계발",
+      "start_page": 115,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권"
+    },
+    {
+      "index": 5,
+      "title": "5장. 노화에 따른 변화와 질환",
+      "start_page": 161,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진"
+    },
+    {
+      "index": 6,
+      "title": "6장 치매, 뇌졸중, 파킨슨질환",
+      "start_page": 235,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진"
+    },
+    {
+      "index": 7,
+      "title": "7장 노인의 건강증진 및 질병예방",
+      "start_page": 251,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진"
+    },
+    {
+      "index": 8,
+      "title": "8장 의사소통과 정서 지원",
+      "start_page": 277,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원"
+    },
+    {
+      "index": 9,
+      "title": "9장 요양보호 기록과 업무보고",
+      "start_page": 303,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원"
+    },
+    {
+      "index": 10,
+      "title": "10장. 신체활동 지원",
+      "start_page": 349,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원"
+    },
+    {
+      "index": 11,
+      "title": "11장 가사 및 일상생활 지원",
+      "start_page": 509,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원"
+    },
+    {
+      "index": 12,
+      "title": "12장. 치매 요양보호",
+      "start_page": 571,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술"
+    },
+    {
+      "index": 13,
+      "title": "13장. 임종 요양보호",
+      "start_page": 643,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술"
+    },
+    {
+      "index": 14,
+      "title": "14장 응급상황 대처 및 감염관리",
+      "start_page": 655,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술"
+    },
+    {
+      "index": 15,
+      "title": "15장 상황별 사례",
+      "start_page": 685,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술"
+    }
+  ],
+  "sections": [
+    {
+      "index": 1,
+      "title": "1절 노인과 노화 과정",
+      "start_page": 14,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해"
+    },
+    {
+      "index": 2,
+      "title": "2절 노년기의 특성",
+      "start_page": 19,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해"
+    },
+    {
+      "index": 3,
+      "title": "3절 가족관계 변화와 노인 부양",
+      "start_page": 24,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해"
+    },
+    {
+      "index": 4,
+      "title": "4절 대상자 중심 요양보호",
+      "start_page": 29,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해"
+    },
+    {
+      "index": 5,
+      "title": "1절 사회복지와 노인복지",
+      "start_page": 36,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도"
+    },
+    {
+      "index": 6,
+      "title": "2절 노인장기요양보험제도",
+      "start_page": 49,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도"
+    },
+    {
+      "index": 7,
+      "title": "3절 요양보호 업무",
+      "start_page": 63,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도"
+    },
+    {
+      "index": 8,
+      "title": "1절 노인의 인권보호",
+      "start_page": 86,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 3,
+      "chapter_title": "3장. 노인의 인권과 보호"
+    },
+    {
+      "index": 9,
+      "title": "2절 노인학대 예방",
+      "start_page": 102,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 3,
+      "chapter_title": "3장. 노인의 인권과 보호"
+    },
+    {
+      "index": 10,
+      "title": "1절 요양보호사의 인권 보호",
+      "start_page": 116,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발"
+    },
+    {
+      "index": 11,
+      "title": "2절 요양보호사의 직업윤리",
+      "start_page": 123,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발"
+    },
+    {
+      "index": 12,
+      "title": "3절 요양보호사의 건강 및 안전관리",
+      "start_page": 134,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발"
+    },
+    {
+      "index": 13,
+      "title": "1절 노화에 따른 변화와 노인성 질환의 특성",
+      "start_page": 162,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환"
+    },
+    {
+      "index": 14,
+      "title": "2절 신체계통별 주요 질환",
+      "start_page": 163,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환"
+    },
+    {
+      "index": 15,
+      "title": "3절 노인증후군과 노쇠",
+      "start_page": 228,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환"
+    },
+    {
+      "index": 16,
+      "title": "1절 치매",
+      "start_page": 236,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환"
+    },
+    {
+      "index": 17,
+      "title": "2절 뇌졸중",
+      "start_page": 244,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환"
+    },
+    {
+      "index": 18,
+      "title": "3절 파킨슨병",
+      "start_page": 248,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환"
+    },
+    {
+      "index": 19,
+      "title": "1절 영양",
+      "start_page": 252,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 20,
+      "title": "2절 운동",
+      "start_page": 254,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 21,
+      "title": "3절 수면",
+      "start_page": 256,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 22,
+      "title": "4절 성생활",
+      "start_page": 259,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 23,
+      "title": "5절 약물사용",
+      "start_page": 263,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 24,
+      "title": "6절 금연과 절주",
+      "start_page": 266,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 25,
+      "title": "7절 예방접종",
+      "start_page": 270,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 26,
+      "title": "8절 온열질환 및 한랭질환",
+      "start_page": 272,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방"
+    },
+    {
+      "index": 27,
+      "title": "1절 효과적인 의사소통과 정서지원",
+      "start_page": 278,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원"
+    },
+    {
+      "index": 28,
+      "title": "2절 상황별 의사소통의 실제",
+      "start_page": 292,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원"
+    },
+    {
+      "index": 29,
+      "title": "3절 여가활동 지원",
+      "start_page": 298,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원"
+    },
+    {
+      "index": 30,
+      "title": "1절 요양보호 관찰과 기록",
+      "start_page": 304,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고"
+    },
+    {
+      "index": 31,
+      "title": "2절 업무보고",
+      "start_page": 336,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고"
+    },
+    {
+      "index": 32,
+      "title": "3절. 사례관리지원과 업무회의",
+      "start_page": 339,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고"
+    },
+    {
+      "index": 33,
+      "title": "1절 식사와 영양 요양보호",
+      "start_page": 350,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원"
+    },
+    {
+      "index": 34,
+      "title": "2절 투약돕기",
+      "start_page": 367,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원"
+    },
+    {
+      "index": 35,
+      "title": "3절 배설 요양보호",
+      "start_page": 374,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원"
+    },
+    {
+      "index": 36,
+      "title": "4절 개인위생 및 환경관리",
+      "start_page": 394,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원"
+    },
+    {
+      "index": 37,
+      "title": "5절 체위변경과 이동",
+      "start_page": 436,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원"
+    },
+    {
+      "index": 38,
+      "title": "6절 복지용구",
+      "start_page": 469,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원"
+    },
+    {
+      "index": 39,
+      "title": "1절 일상생활 지원 원칙",
+      "start_page": 510,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 40,
+      "title": "2절 식사관리",
+      "start_page": 513,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 41,
+      "title": "3절 식품‧주방위생관리",
+      "start_page": 534,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 42,
+      "title": "4절 의복 및 침상청결 관리",
+      "start_page": 546,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 43,
+      "title": "5절 세탁하기",
+      "start_page": 549,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 44,
+      "title": "6절 외출동행 및 일상업무 대행",
+      "start_page": 554,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 45,
+      "title": "7절 주거환경관리",
+      "start_page": 558,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원"
+    },
+    {
+      "index": 46,
+      "title": "1절 치매 대상자와 가족",
+      "start_page": 572,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호"
+    },
+    {
+      "index": 47,
+      "title": "2절 치매 대상자의 일상생활 지원",
+      "start_page": 580,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호"
+    },
+    {
+      "index": 48,
+      "title": "3절 치매 대상자의 정신행동증상 대처",
+      "start_page": 593,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호"
+    },
+    {
+      "index": 49,
+      "title": "4절 치매 대상자와의 의사소통",
+      "start_page": 604,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호"
+    },
+    {
+      "index": 50,
+      "title": "5절 인지자극 훈련",
+      "start_page": 617,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호"
+    },
+    {
+      "index": 51,
+      "title": "1절 임종기 단계별 지원",
+      "start_page": 644,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호"
+    },
+    {
+      "index": 52,
+      "title": "2절 임종 대상자 지원 및 가족 요양보호",
+      "start_page": 647,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호"
+    },
+    {
+      "index": 53,
+      "title": "3절 임종 대상자의 권리",
+      "start_page": 652,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호"
+    },
+    {
+      "index": 54,
+      "title": "1절 위험 및 위기대응",
+      "start_page": 656,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리"
+    },
+    {
+      "index": 55,
+      "title": "2절 감염예방 및 관리",
+      "start_page": 661,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리"
+    },
+    {
+      "index": 56,
+      "title": "3절 응급처치",
+      "start_page": 673,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리"
+    },
+    {
+      "index": 57,
+      "title": "4절 심폐소생술",
+      "start_page": 679,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리"
+    },
+    {
+      "index": 58,
+      "title": "1절 일상생활 돌봄",
+      "start_page": 686,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례"
+    },
+    {
+      "index": 59,
+      "title": "2절 정신행동증상 돌봄",
+      "start_page": 696,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례"
+    },
+    {
+      "index": 60,
+      "title": "3절 치매가족 지원 활동",
+      "start_page": 706,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례"
+    }
+  ],
+  "docs": [
+    {
+      "kind": "frontmatter",
+      "title": "표지 및 차례",
+      "file_name": "00-frontmatter.md",
+      "start_page": 1,
+      "end_page": 10,
+      "part_index": null,
+      "part_title": null,
+      "chapter_index": null,
+      "chapter_title": null,
+      "section_index": null
+    },
+    {
+      "kind": "part",
+      "title": "Ⅰ부. 요양보호와 인권",
+      "file_name": "part-01-overview-Ⅰ부-요양보호와-인권.md",
+      "start_page": 11,
+      "end_page": 12,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": null,
+      "chapter_title": null,
+      "section_index": null
+    },
+    {
+      "kind": "chapter",
+      "title": "1장 요양보호 대상자 이해",
+      "file_name": "chapter-01-overview-1장-요양보호-대상자-이해.md",
+      "start_page": 13,
+      "end_page": 13,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 노인과 노화 과정",
+      "file_name": "part-01_chapter-01_section-01_1절-노인과-노화-과정.md",
+      "start_page": 14,
+      "end_page": 18,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해",
+      "section_index": 1
+    },
+    {
+      "kind": "section",
+      "title": "2절 노년기의 특성",
+      "file_name": "part-01_chapter-01_section-02_2절-노년기의-특성.md",
+      "start_page": 19,
+      "end_page": 23,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해",
+      "section_index": 2
+    },
+    {
+      "kind": "section",
+      "title": "3절 가족관계 변화와 노인 부양",
+      "file_name": "part-01_chapter-01_section-03_3절-가족관계-변화와-노인-부양.md",
+      "start_page": 24,
+      "end_page": 28,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해",
+      "section_index": 3
+    },
+    {
+      "kind": "section",
+      "title": "4절 대상자 중심 요양보호",
+      "file_name": "part-01_chapter-01_section-04_4절-대상자-중심-요양보호.md",
+      "start_page": 29,
+      "end_page": 34,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 1,
+      "chapter_title": "1장 요양보호 대상자 이해",
+      "section_index": 4
+    },
+    {
+      "kind": "chapter",
+      "title": "2장 노인복지와 장기요양제도",
+      "file_name": "chapter-02-overview-2장-노인복지와-장기요양제도.md",
+      "start_page": 35,
+      "end_page": 35,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 사회복지와 노인복지",
+      "file_name": "part-01_chapter-02_section-05_1절-사회복지와-노인복지.md",
+      "start_page": 36,
+      "end_page": 48,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도",
+      "section_index": 5
+    },
+    {
+      "kind": "section",
+      "title": "2절 노인장기요양보험제도",
+      "file_name": "part-01_chapter-02_section-06_2절-노인장기요양보험제도.md",
+      "start_page": 49,
+      "end_page": 62,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도",
+      "section_index": 6
+    },
+    {
+      "kind": "section",
+      "title": "3절 요양보호 업무",
+      "file_name": "part-01_chapter-02_section-07_3절-요양보호-업무.md",
+      "start_page": 63,
+      "end_page": 84,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 2,
+      "chapter_title": "2장 노인복지와 장기요양제도",
+      "section_index": 7
+    },
+    {
+      "kind": "chapter",
+      "title": "3장. 노인의 인권과 보호",
+      "file_name": "chapter-03-overview-3장-노인의-인권과-보호.md",
+      "start_page": 85,
+      "end_page": 85,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 3,
+      "chapter_title": "3장. 노인의 인권과 보호",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 노인의 인권보호",
+      "file_name": "part-01_chapter-03_section-08_1절-노인의-인권보호.md",
+      "start_page": 86,
+      "end_page": 101,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 3,
+      "chapter_title": "3장. 노인의 인권과 보호",
+      "section_index": 8
+    },
+    {
+      "kind": "section",
+      "title": "2절 노인학대 예방",
+      "file_name": "part-01_chapter-03_section-09_2절-노인학대-예방.md",
+      "start_page": 102,
+      "end_page": 114,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 3,
+      "chapter_title": "3장. 노인의 인권과 보호",
+      "section_index": 9
+    },
+    {
+      "kind": "chapter",
+      "title": "4장. 요양보호사의 인권보호와 자기계발",
+      "file_name": "chapter-04-overview-4장-요양보호사의-인권보호와-자기계발.md",
+      "start_page": 115,
+      "end_page": 115,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 요양보호사의 인권 보호",
+      "file_name": "part-01_chapter-04_section-10_1절-요양보호사의-인권-보호.md",
+      "start_page": 116,
+      "end_page": 122,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발",
+      "section_index": 10
+    },
+    {
+      "kind": "section",
+      "title": "2절 요양보호사의 직업윤리",
+      "file_name": "part-01_chapter-04_section-11_2절-요양보호사의-직업윤리.md",
+      "start_page": 123,
+      "end_page": 133,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발",
+      "section_index": 11
+    },
+    {
+      "kind": "section",
+      "title": "3절 요양보호사의 건강 및 안전관리",
+      "file_name": "part-01_chapter-04_section-12_3절-요양보호사의-건강-및-안전관리.md",
+      "start_page": 134,
+      "end_page": 158,
+      "part_index": 1,
+      "part_title": "Ⅰ부. 요양보호와 인권",
+      "chapter_index": 4,
+      "chapter_title": "4장. 요양보호사의 인권보호와 자기계발",
+      "section_index": 12
+    },
+    {
+      "kind": "part",
+      "title": "Ⅱ부. 노화와 건강증진",
+      "file_name": "part-02-overview-Ⅱ부-노화와-건강증진.md",
+      "start_page": 159,
+      "end_page": 160,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": null,
+      "chapter_title": null,
+      "section_index": null
+    },
+    {
+      "kind": "chapter",
+      "title": "5장. 노화에 따른 변화와 질환",
+      "file_name": "chapter-05-overview-5장-노화에-따른-변화와-질환.md",
+      "start_page": 161,
+      "end_page": 161,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 노화에 따른 변화와 노인성 질환의 특성",
+      "file_name": "part-02_chapter-05_section-13_1절-노화에-따른-변화와-노인성-질환의-특성.md",
+      "start_page": 162,
+      "end_page": 162,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환",
+      "section_index": 13
+    },
+    {
+      "kind": "section",
+      "title": "2절 신체계통별 주요 질환",
+      "file_name": "part-02_chapter-05_section-14_2절-신체계통별-주요-질환.md",
+      "start_page": 163,
+      "end_page": 227,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환",
+      "section_index": 14
+    },
+    {
+      "kind": "section",
+      "title": "3절 노인증후군과 노쇠",
+      "file_name": "part-02_chapter-05_section-15_3절-노인증후군과-노쇠.md",
+      "start_page": 228,
+      "end_page": 234,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 5,
+      "chapter_title": "5장. 노화에 따른 변화와 질환",
+      "section_index": 15
+    },
+    {
+      "kind": "chapter",
+      "title": "6장 치매, 뇌졸중, 파킨슨질환",
+      "file_name": "chapter-06-overview-6장-치매-뇌졸중-파킨슨질환.md",
+      "start_page": 235,
+      "end_page": 235,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 치매",
+      "file_name": "part-02_chapter-06_section-16_1절-치매.md",
+      "start_page": 236,
+      "end_page": 243,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환",
+      "section_index": 16
+    },
+    {
+      "kind": "section",
+      "title": "2절 뇌졸중",
+      "file_name": "part-02_chapter-06_section-17_2절-뇌졸중.md",
+      "start_page": 244,
+      "end_page": 247,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환",
+      "section_index": 17
+    },
+    {
+      "kind": "section",
+      "title": "3절 파킨슨병",
+      "file_name": "part-02_chapter-06_section-18_3절-파킨슨병.md",
+      "start_page": 248,
+      "end_page": 250,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 6,
+      "chapter_title": "6장 치매, 뇌졸중, 파킨슨질환",
+      "section_index": 18
+    },
+    {
+      "kind": "chapter",
+      "title": "7장 노인의 건강증진 및 질병예방",
+      "file_name": "chapter-07-overview-7장-노인의-건강증진-및-질병예방.md",
+      "start_page": 251,
+      "end_page": 251,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 영양",
+      "file_name": "part-02_chapter-07_section-19_1절-영양.md",
+      "start_page": 252,
+      "end_page": 253,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 19
+    },
+    {
+      "kind": "section",
+      "title": "2절 운동",
+      "file_name": "part-02_chapter-07_section-20_2절-운동.md",
+      "start_page": 254,
+      "end_page": 255,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 20
+    },
+    {
+      "kind": "section",
+      "title": "3절 수면",
+      "file_name": "part-02_chapter-07_section-21_3절-수면.md",
+      "start_page": 256,
+      "end_page": 258,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 21
+    },
+    {
+      "kind": "section",
+      "title": "4절 성생활",
+      "file_name": "part-02_chapter-07_section-22_4절-성생활.md",
+      "start_page": 259,
+      "end_page": 262,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 22
+    },
+    {
+      "kind": "section",
+      "title": "5절 약물사용",
+      "file_name": "part-02_chapter-07_section-23_5절-약물사용.md",
+      "start_page": 263,
+      "end_page": 265,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 23
+    },
+    {
+      "kind": "section",
+      "title": "6절 금연과 절주",
+      "file_name": "part-02_chapter-07_section-24_6절-금연과-절주.md",
+      "start_page": 266,
+      "end_page": 269,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 24
+    },
+    {
+      "kind": "section",
+      "title": "7절 예방접종",
+      "file_name": "part-02_chapter-07_section-25_7절-예방접종.md",
+      "start_page": 270,
+      "end_page": 271,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 25
+    },
+    {
+      "kind": "section",
+      "title": "8절 온열질환 및 한랭질환",
+      "file_name": "part-02_chapter-07_section-26_8절-온열질환-및-한랭질환.md",
+      "start_page": 272,
+      "end_page": 274,
+      "part_index": 2,
+      "part_title": "Ⅱ부. 노화와 건강증진",
+      "chapter_index": 7,
+      "chapter_title": "7장 노인의 건강증진 및 질병예방",
+      "section_index": 26
+    },
+    {
+      "kind": "part",
+      "title": "Ⅲ부. 요양보호와 생활지원",
+      "file_name": "part-03-overview-Ⅲ부-요양보호와-생활지원.md",
+      "start_page": 275,
+      "end_page": 276,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": null,
+      "chapter_title": null,
+      "section_index": null
+    },
+    {
+      "kind": "chapter",
+      "title": "8장 의사소통과 정서 지원",
+      "file_name": "chapter-08-overview-8장-의사소통과-정서-지원.md",
+      "start_page": 277,
+      "end_page": 277,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 효과적인 의사소통과 정서지원",
+      "file_name": "part-03_chapter-08_section-27_1절-효과적인-의사소통과-정서지원.md",
+      "start_page": 278,
+      "end_page": 291,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원",
+      "section_index": 27
+    },
+    {
+      "kind": "section",
+      "title": "2절 상황별 의사소통의 실제",
+      "file_name": "part-03_chapter-08_section-28_2절-상황별-의사소통의-실제.md",
+      "start_page": 292,
+      "end_page": 297,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원",
+      "section_index": 28
+    },
+    {
+      "kind": "section",
+      "title": "3절 여가활동 지원",
+      "file_name": "part-03_chapter-08_section-29_3절-여가활동-지원.md",
+      "start_page": 298,
+      "end_page": 302,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 8,
+      "chapter_title": "8장 의사소통과 정서 지원",
+      "section_index": 29
+    },
+    {
+      "kind": "chapter",
+      "title": "9장 요양보호 기록과 업무보고",
+      "file_name": "chapter-09-overview-9장-요양보호-기록과-업무보고.md",
+      "start_page": 303,
+      "end_page": 303,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 요양보호 관찰과 기록",
+      "file_name": "part-03_chapter-09_section-30_1절-요양보호-관찰과-기록.md",
+      "start_page": 304,
+      "end_page": 335,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고",
+      "section_index": 30
+    },
+    {
+      "kind": "section",
+      "title": "2절 업무보고",
+      "file_name": "part-03_chapter-09_section-31_2절-업무보고.md",
+      "start_page": 336,
+      "end_page": 338,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고",
+      "section_index": 31
+    },
+    {
+      "kind": "section",
+      "title": "3절. 사례관리지원과 업무회의",
+      "file_name": "part-03_chapter-09_section-32_3절-사례관리지원과-업무회의.md",
+      "start_page": 339,
+      "end_page": 348,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 9,
+      "chapter_title": "9장 요양보호 기록과 업무보고",
+      "section_index": 32
+    },
+    {
+      "kind": "chapter",
+      "title": "10장. 신체활동 지원",
+      "file_name": "chapter-10-overview-10장-신체활동-지원.md",
+      "start_page": 349,
+      "end_page": 349,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 식사와 영양 요양보호",
+      "file_name": "part-03_chapter-10_section-33_1절-식사와-영양-요양보호.md",
+      "start_page": 350,
+      "end_page": 366,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": 33
+    },
+    {
+      "kind": "section",
+      "title": "2절 투약돕기",
+      "file_name": "part-03_chapter-10_section-34_2절-투약돕기.md",
+      "start_page": 367,
+      "end_page": 373,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": 34
+    },
+    {
+      "kind": "section",
+      "title": "3절 배설 요양보호",
+      "file_name": "part-03_chapter-10_section-35_3절-배설-요양보호.md",
+      "start_page": 374,
+      "end_page": 393,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": 35
+    },
+    {
+      "kind": "section",
+      "title": "4절 개인위생 및 환경관리",
+      "file_name": "part-03_chapter-10_section-36_4절-개인위생-및-환경관리.md",
+      "start_page": 394,
+      "end_page": 435,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": 36
+    },
+    {
+      "kind": "section",
+      "title": "5절 체위변경과 이동",
+      "file_name": "part-03_chapter-10_section-37_5절-체위변경과-이동.md",
+      "start_page": 436,
+      "end_page": 468,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": 37
+    },
+    {
+      "kind": "section",
+      "title": "6절 복지용구",
+      "file_name": "part-03_chapter-10_section-38_6절-복지용구.md",
+      "start_page": 469,
+      "end_page": 508,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 10,
+      "chapter_title": "10장. 신체활동 지원",
+      "section_index": 38
+    },
+    {
+      "kind": "chapter",
+      "title": "11장 가사 및 일상생활 지원",
+      "file_name": "chapter-11-overview-11장-가사-및-일상생활-지원.md",
+      "start_page": 509,
+      "end_page": 509,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 일상생활 지원 원칙",
+      "file_name": "part-03_chapter-11_section-39_1절-일상생활-지원-원칙.md",
+      "start_page": 510,
+      "end_page": 512,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 39
+    },
+    {
+      "kind": "section",
+      "title": "2절 식사관리",
+      "file_name": "part-03_chapter-11_section-40_2절-식사관리.md",
+      "start_page": 513,
+      "end_page": 533,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 40
+    },
+    {
+      "kind": "section",
+      "title": "3절 식품‧주방위생관리",
+      "file_name": "part-03_chapter-11_section-41_3절-식품주방위생관리.md",
+      "start_page": 534,
+      "end_page": 545,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 41
+    },
+    {
+      "kind": "section",
+      "title": "4절 의복 및 침상청결 관리",
+      "file_name": "part-03_chapter-11_section-42_4절-의복-및-침상청결-관리.md",
+      "start_page": 546,
+      "end_page": 548,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 42
+    },
+    {
+      "kind": "section",
+      "title": "5절 세탁하기",
+      "file_name": "part-03_chapter-11_section-43_5절-세탁하기.md",
+      "start_page": 549,
+      "end_page": 553,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 43
+    },
+    {
+      "kind": "section",
+      "title": "6절 외출동행 및 일상업무 대행",
+      "file_name": "part-03_chapter-11_section-44_6절-외출동행-및-일상업무-대행.md",
+      "start_page": 554,
+      "end_page": 557,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 44
+    },
+    {
+      "kind": "section",
+      "title": "7절 주거환경관리",
+      "file_name": "part-03_chapter-11_section-45_7절-주거환경관리.md",
+      "start_page": 558,
+      "end_page": 568,
+      "part_index": 3,
+      "part_title": "Ⅲ부. 요양보호와 생활지원",
+      "chapter_index": 11,
+      "chapter_title": "11장 가사 및 일상생활 지원",
+      "section_index": 45
+    },
+    {
+      "kind": "part",
+      "title": "Ⅳ부. 상황별 요양보호 기술",
+      "file_name": "part-04-overview-Ⅳ부-상황별-요양보호-기술.md",
+      "start_page": 569,
+      "end_page": 570,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": null,
+      "chapter_title": null,
+      "section_index": null
+    },
+    {
+      "kind": "chapter",
+      "title": "12장. 치매 요양보호",
+      "file_name": "chapter-12-overview-12장-치매-요양보호.md",
+      "start_page": 571,
+      "end_page": 571,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 치매 대상자와 가족",
+      "file_name": "part-04_chapter-12_section-46_1절-치매-대상자와-가족.md",
+      "start_page": 572,
+      "end_page": 579,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호",
+      "section_index": 46
+    },
+    {
+      "kind": "section",
+      "title": "2절 치매 대상자의 일상생활 지원",
+      "file_name": "part-04_chapter-12_section-47_2절-치매-대상자의-일상생활-지원.md",
+      "start_page": 580,
+      "end_page": 592,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호",
+      "section_index": 47
+    },
+    {
+      "kind": "section",
+      "title": "3절 치매 대상자의 정신행동증상 대처",
+      "file_name": "part-04_chapter-12_section-48_3절-치매-대상자의-정신행동증상-대처.md",
+      "start_page": 593,
+      "end_page": 603,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호",
+      "section_index": 48
+    },
+    {
+      "kind": "section",
+      "title": "4절 치매 대상자와의 의사소통",
+      "file_name": "part-04_chapter-12_section-49_4절-치매-대상자와의-의사소통.md",
+      "start_page": 604,
+      "end_page": 616,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호",
+      "section_index": 49
+    },
+    {
+      "kind": "section",
+      "title": "5절 인지자극 훈련",
+      "file_name": "part-04_chapter-12_section-50_5절-인지자극-훈련.md",
+      "start_page": 617,
+      "end_page": 642,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 12,
+      "chapter_title": "12장. 치매 요양보호",
+      "section_index": 50
+    },
+    {
+      "kind": "chapter",
+      "title": "13장. 임종 요양보호",
+      "file_name": "chapter-13-overview-13장-임종-요양보호.md",
+      "start_page": 643,
+      "end_page": 643,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 임종기 단계별 지원",
+      "file_name": "part-04_chapter-13_section-51_1절-임종기-단계별-지원.md",
+      "start_page": 644,
+      "end_page": 646,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호",
+      "section_index": 51
+    },
+    {
+      "kind": "section",
+      "title": "2절 임종 대상자 지원 및 가족 요양보호",
+      "file_name": "part-04_chapter-13_section-52_2절-임종-대상자-지원-및-가족-요양보호.md",
+      "start_page": 647,
+      "end_page": 651,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호",
+      "section_index": 52
+    },
+    {
+      "kind": "section",
+      "title": "3절 임종 대상자의 권리",
+      "file_name": "part-04_chapter-13_section-53_3절-임종-대상자의-권리.md",
+      "start_page": 652,
+      "end_page": 654,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 13,
+      "chapter_title": "13장. 임종 요양보호",
+      "section_index": 53
+    },
+    {
+      "kind": "chapter",
+      "title": "14장 응급상황 대처 및 감염관리",
+      "file_name": "chapter-14-overview-14장-응급상황-대처-및-감염관리.md",
+      "start_page": 655,
+      "end_page": 655,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 위험 및 위기대응",
+      "file_name": "part-04_chapter-14_section-54_1절-위험-및-위기대응.md",
+      "start_page": 656,
+      "end_page": 660,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리",
+      "section_index": 54
+    },
+    {
+      "kind": "section",
+      "title": "2절 감염예방 및 관리",
+      "file_name": "part-04_chapter-14_section-55_2절-감염예방-및-관리.md",
+      "start_page": 661,
+      "end_page": 672,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리",
+      "section_index": 55
+    },
+    {
+      "kind": "section",
+      "title": "3절 응급처치",
+      "file_name": "part-04_chapter-14_section-56_3절-응급처치.md",
+      "start_page": 673,
+      "end_page": 678,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리",
+      "section_index": 56
+    },
+    {
+      "kind": "section",
+      "title": "4절 심폐소생술",
+      "file_name": "part-04_chapter-14_section-57_4절-심폐소생술.md",
+      "start_page": 679,
+      "end_page": 684,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 14,
+      "chapter_title": "14장 응급상황 대처 및 감염관리",
+      "section_index": 57
+    },
+    {
+      "kind": "chapter",
+      "title": "15장 상황별 사례",
+      "file_name": "chapter-15-overview-15장-상황별-사례.md",
+      "start_page": 685,
+      "end_page": 685,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례",
+      "section_index": null
+    },
+    {
+      "kind": "section",
+      "title": "1절 일상생활 돌봄",
+      "file_name": "part-04_chapter-15_section-58_1절-일상생활-돌봄.md",
+      "start_page": 686,
+      "end_page": 695,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례",
+      "section_index": 58
+    },
+    {
+      "kind": "section",
+      "title": "2절 정신행동증상 돌봄",
+      "file_name": "part-04_chapter-15_section-59_2절-정신행동증상-돌봄.md",
+      "start_page": 696,
+      "end_page": 705,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례",
+      "section_index": 59
+    },
+    {
+      "kind": "section",
+      "title": "3절 치매가족 지원 활동",
+      "file_name": "part-04_chapter-15_section-60_3절-치매가족-지원-활동.md",
+      "start_page": 706,
+      "end_page": 712,
+      "part_index": 4,
+      "part_title": "Ⅳ부. 상황별 요양보호 기술",
+      "chapter_index": 15,
+      "chapter_title": "15장 상황별 사례",
+      "section_index": 60
+    }
+  ]
+}
